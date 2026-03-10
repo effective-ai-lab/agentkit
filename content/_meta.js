@@ -4,7 +4,6 @@ export default {
     type: 'page'
   },
   workshop: {
-    title: '워크숍',
-    type: 'page'
+    title: '워크숍'
   }
 }
