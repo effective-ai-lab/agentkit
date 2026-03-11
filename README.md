@@ -1,18 +1,18 @@
-# vibekit
+# agentkit
 
-> 좋은 Input이 좋은 Output을 만든다.
+> 만든다 → 반복을 발견한다 → 반복을 자산으로 만든다
 
-AI 도구 활용 실습 가이드 — 프롬프트부터 배포 가능한 앱까지, 단계별로 경험하며 배웁니다.
+같은 앱을 세 가지 AI 도구로 만들면서 "AI에게 반복하는 말"을 발견하고, 그 반복을 **AGENTS.md**라는 자산으로 만드는 실습 워크숍 가이드입니다.
 
 ## 워크숍 구성
 
-3시간 × 3세션 심화 워크숍:
+3세션 심화 워크숍:
 
-| 세션 | 내용 |
-|------|------|
-| 세션 1 | 프롬프트 증강기를 Gemini Canvas → AI Studio → Lovable로 3번 만들기 |
-| 세션 2 | Google 인증 · Supabase DB · Gemini API 연동 단계별 미션 |
-| 세션 3 | 팀 공유 + 태그/검색으로 프롬프트 자산화 |
+| 세션 | 핵심 경험 | 사용 도구 |
+|------|-----------|-----------|
+| 세션 1 — 만든다 | 같은 앱을 두 도구로 만들며 경험 쌓기 | Gemini Canvas, Google AI Studio |
+| 세션 2 — 반복 발견 | Lovable로 완성도 높이기 + 반복 발견하기 | Lovable |
+| 세션 3 — 자산화 | 반복을 AGENTS.md로 자산화 + Before/After 실험 | Lovable (Knowledge) |
 
 ## 개발
 
@@ -25,3 +25,5 @@ npm run dev
 
 - [Next.js 15](https://nextjs.org)
 - [Nextra 4](https://nextra.site) — 문서 사이트 프레임워크
+- [React 19](https://react.dev)
+- [Pagefind](https://pagefind.app) — 정적 사이트 검색

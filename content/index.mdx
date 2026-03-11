@@ -12,56 +12,55 @@ theme:
 
 <div className="home-page">
   <section className="home-hero">
-    <span className="home-kicker">빗썸 워크숍</span>
+    <span className="home-kicker">AI 워크숍</span>
     <h1 className="home-title">AI와 일하는 나만의 원칙 만들기</h1>
-    <span className="home-subtitle">
-      같은 앱을 세 가지 도구로 만들면서 "AI에게 반복하는 말"을 발견하고,
+    <div className="home-subtitle">
+      같은 앱을 세 가지 도구로 만들면서 &quot;AI에게 반복하는 말&quot;을 발견하고,
       그 반복을 AGENTS.md라는 자산으로 만드는 실습 가이드입니다.
-    </span>
+    </div>
     <div className="home-actions">
-      <a className="home-button primary" href="/workshop">실습 시작하기</a>
+      <a className="home-button primary" href="/workshop/session-1">세션 1 시작하기</a>
+      <a className="home-button" href="#roadmap">로드맵 보기</a>
     </div>
   </section>
 
-  <section className="home-divider-section">
-    <div className="home-divider-card">
-      <span className="home-divider-label">양을 늘린다</span>
-      <span className="home-divider-text">같은 앱을 세 도구로 만들며 AI 활용 경험을 쌓는다</span>
+  <section className="home-roadmap" id="roadmap">
+    <div className="home-section-head">
+      <span className="section-kicker">Workshop Roadmap</span>
+      <h2 className="home-section-title">세 세션으로 끝냅니다</h2>
     </div>
-    <div className="home-divider-arrow">→</div>
-    <div className="home-divider-card">
-      <span className="home-divider-label">반복을 발견한다</span>
-      <span className="home-divider-text">AI에게 반복해서 요청한 말을 찾아낸다</span>
-    </div>
-    <div className="home-divider-arrow">→</div>
-    <div className="home-divider-card active">
-      <span className="home-divider-label">자산으로 만든다</span>
-      <span className="home-divider-text">반복을 AGENTS.md에 담아 한 번 설명으로 매번 적용한다</span>
-    </div>
-  </section>
-
-  <section className="home-roadmap">
-    <span className="section-kicker">Workshop Roadmap</span>
-    <h2 className="home-section-title">세 단계로 진행합니다</h2>
     <div className="home-steps">
       <a className="home-step" href="/workshop/session-1">
-        <span className="home-step-number">01</span>
+        <span className="home-step-number step-blue">01</span>
         <h3>만든다 — 양을 늘린다</h3>
-        <span className="home-step-desc">프롬프트 증강기를 Gemini Canvas와 Google AI Studio로 만들며 AI 활용 경험을 쌓습니다.</span>
-        <span className="home-step-tag">세션 1</span>
+        <span className="home-step-tools">Gemini Canvas · Google AI Studio</span>
+        <span className="home-step-desc">프롬프트 증강기를 두 방식으로 만들며 AI 활용 경험의 폭을 먼저 넓힙니다.</span>
+        <span className="home-step-tag">~40분</span>
       </a>
+      <span className="home-step-arrow" aria-hidden="true">→</span>
       <a className="home-step" href="/workshop/session-2">
-        <span className="home-step-number">02</span>
+        <span className="home-step-number step-green">02</span>
         <h3>만든다 + 반복을 발견한다</h3>
-        <span className="home-step-desc">Lovable로 완성도를 높이고, 세 도구에서 반복했던 말을 찾아냅니다.</span>
-        <span className="home-step-tag">세션 2</span>
+        <span className="home-step-tools">Lovable · 반복 패턴 추출</span>
+        <span className="home-step-desc">완성도를 높이는 과정에서 세 도구에 공통으로 요구한 표현과 의도를 뽑아냅니다.</span>
+        <span className="home-step-tag">~40분</span>
       </a>
+      <span className="home-step-arrow" aria-hidden="true">→</span>
       <a className="home-step" href="/workshop/session-3">
-        <span className="home-step-number">03</span>
+        <span className="home-step-number step-purple">03</span>
         <h3>자산으로 만든다</h3>
-        <span className="home-step-desc">반복을 AGENTS.md로 정리하고, Before/After로 차이를 직접 확인합니다.</span>
-        <span className="home-step-tag">세션 3</span>
+        <span className="home-step-tools">AGENTS.md · Before/After</span>
+        <span className="home-step-desc">반복을 문서로 정리하고, 실제로 AI가 얼마나 더 일관되게 움직이는지 직접 비교합니다.</span>
+        <span className="home-step-tag">~30분</span>
       </a>
+    </div>
+  </section>
+
+  <section className="home-cta">
+    <h2>세션 1부터 순서대로 따라가면 됩니다</h2>
+    <p>만드는 경험, 반복 추출, AGENTS.md 정리까지 한 흐름으로 연결해두었습니다.</p>
+    <div className="home-actions">
+      <a className="home-button" href="/workshop">전체 워크숍 보기</a>
     </div>
   </section>
 </div>

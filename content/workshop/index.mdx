@@ -3,11 +3,11 @@ title: 워크숍 개요
 description: 만든다 → 반복을 발견한다 → 반복을 자산으로 만든다
 ---
 
-import { Steps, Callout } from 'nextra/components'
+import { Steps, Callout, Cards } from 'nextra/components'
 
 # 워크숍 개요
 
-## 핵심 서사
+<div className="workshop-narrative">
 
 > **만든다 (양) → 반복을 발견한다 → 반복을 자산으로 만든다 (질)**
 
@@ -15,40 +15,51 @@ import { Steps, Callout } from 'nextra/components'
 같은 앱을 반복해서 만들면서 "AI에게 매번 하는 말"을 발견하고,
 그 반복을 **AGENTS.md**라는 파일 하나에 담아 자산으로 만드는 경험을 합니다.
 
-<Callout type="info">
+</div>
+
+## 3세션 흐름
+
+<Steps>
+### 세션 1: 만든다 — 양을 늘린다
+
+<span className="step-tools">Gemini Canvas · Google AI Studio</span>
+
+Gemini Canvas로 빠르게 프로토타입을 만들고, Google AI Studio Build로 같은 앱을 한 번 더 만듭니다.
+같은 목표에 도구만 바꾸면서 "AI에게 어떻게 요청하면 좋은지" 감을 잡습니다.
+
+[세션 1 시작하기 →](/workshop/session-1)
+
+### 세션 2: 만든다 + 반복을 발견한다
+
+<span className="step-tools">Lovable</span>
+
+Lovable로 프롬프트 증강기의 완성 버전을 만들고, Google 인증과 DB까지 붙여봅니다.
+그리고 세 도구에서 AI에게 **반복했던 말**을 찾아냅니다. 이게 다음 세션의 재료입니다.
+
+[세션 2 시작하기 →](/workshop/session-2)
+
+### 세션 3: 반복을 자산으로 만든다
+
+<span className="step-tools">Lovable (Knowledge)</span>
+
+발견한 반복을 AGENTS.md 형식으로 정리하고,
+Lovable의 Knowledge에 넣어 **Before/After 차이**를 직접 확인합니다.
+마지막으로 내가 만든 증강기를 활용해 AGENTS.md를 더 다듬어봅니다.
+
+<Callout type="info" emoji="📄">
 **AGENTS.md란?**
 
 AI에게 "나는 이렇게 일한다"를 알려주는 파일입니다.
 한 번 작성하면 매번 반복해서 말하지 않아도 AI가 알아서 적용합니다.
 </Callout>
 
-## 3세션 구성
+[세션 3 시작하기 →](/workshop/session-3)
 
-| 세션 | 핵심 경험 | 사용 도구 |
-|------|-----------|-----------|
-| 세션 1 | 같은 앱을 두 도구로 만들며 경험 쌓기 | Gemini Canvas, Google AI Studio |
-| 세션 2 | Lovable로 완성도 높이기 + 반복 발견하기 | Lovable |
-| 세션 3 | 반복을 AGENTS.md로 자산화 + Before/After 실험 | Lovable (Knowledge) |
-
-## 전체 흐름
-
-<Steps>
-### 세션 1: 만든다 — 양을 늘린다
-
-Gemini Canvas로 빠르게 프로토타입을 만들고, Google AI Studio Build로 같은 앱을 한 번 더 만듭니다.
-같은 목표에 도구만 바꾸면서 "AI에게 어떻게 요청하면 좋은지" 감을 잡습니다.
-
-### 세션 2: 만든다 + 반복을 발견한다
-
-Lovable로 프롬프트 증강기의 완성 버전을 만들고, Google 인증과 DB까지 붙여봅니다.
-그리고 세 도구에서 AI에게 **반복했던 말**을 찾아냅니다. 이게 다음 세션의 재료입니다.
-
-### 세션 3: 반복을 자산으로 만든다
-
-발견한 반복을 AGENTS.md 형식으로 정리하고,
-Lovable의 Knowledge에 넣어 **Before/After 차이**를 직접 확인합니다.
-마지막으로 내가 만든 증강기를 활용해 AGENTS.md를 더 다듬어봅니다.
 </Steps>
+
+---
+
+<div className="workshop-prep">
 
 ## 준비물 체크
 
@@ -58,3 +69,5 @@ Lovable의 Knowledge에 넣어 **Before/After 차이**를 직접 확인합니다
 - [x] GitHub 계정 로그인 완료
 - [x] Lovable 워크스페이스 초대 수락 완료 (빗썸 실습용 워크스페이스)
 - [x] [딸깍 사이트](https://dalgak.com/) 접속 확인
+
+</div>
