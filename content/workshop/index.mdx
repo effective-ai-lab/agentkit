@@ -25,31 +25,41 @@ import { Steps, Callout, Cards } from 'nextra/components'
 1년 뒤인 2026년, 카파시는 직접 그 용어를 폐기하고 <strong>"에이전틱 엔지니어링"</strong>(Agentic Engineering)이라는 새로운 개념을 제안합니다.
 
 <Callout type="info" emoji="💬">
-**Andrej Karpathy (2026.02)**
+**Andrej Karpathy, [바이브 코딩 1주년 회고](https://x.com/karpathy/status/2019137879310836075) (2026.02)**
+
+*"당시에는 LLM 능력이 낮아서 바이브 코딩은 주로 재미삼아 하는 일회성 프로젝트에 썼다...
+오늘날, LLM 에이전트를 통한 프로그래밍은 전문가들의 기본 워크플로우가 되어가고 있다. 다만 더 많은 감독과 검토가 따른다.
+에이전트 활용의 레버리지는 취하되, 소프트웨어 품질에는 타협이 없어야 한다."*
 
 *"'Agentic' — 99%의 시간 동안 코드를 직접 쓰지 않고, 에이전트를 오케스트레이션하며 감독하는 것이다.
-'Engineering' — 거기에는 기술과 과학, 전문성이 있음을 강조하기 위해서다."*
+'Engineering' — 거기에는 기술과 과학, 전문성이 있다. 배울 수 있고, 더 잘할 수 있는 것이다."*
 </Callout>
 
 바이브 코딩이 "일단 만들어봐"에 가까웠다면,
 에이전틱 엔지니어링은 **"AI에게 어떻게 일을 시킬지 설계하는 것"**에 가깝습니다.
 
-이 전환에서 핵심은 바로 **재사용 가능한 지시 자산**입니다.
-카파시는 2026년 3월 공개한 [autoresearch](https://github.com/karpathy/autoresearch) 프로젝트에서 이를 직접 보여줍니다:
+카파시는 구체적인 산출물을 지정하지는 않았지만, 2026년 3월 공개한 [autoresearch](https://github.com/karpathy/autoresearch) 프로젝트에서 **행동으로 보여줍니다**:
 
 <Callout type="default" emoji="🔬">
-**autoresearch의 구조**
+**카파시의 autoresearch — 에이전틱 엔지니어링의 실제**
 
 - 사람은 `program.md`(마크다운 지시서)를 반복적으로 다듬는다
 - AI 에이전트는 그 지시에 따라 코드(`train.py`)를 자율적으로 수정하고 실험한다
 - 카파시는 이 `.md` 파일을 **"essentially a super lightweight skill"**이라고 표현
+- 사람은 파이썬 파일을 직접 건드리지 않는다 — 오직 `.md` 지시서만 개선한다
 
-→ **사람의 일 = 코드 작성이 아니라, AI가 따를 지시를 자산으로 만드는 것**
+→ **사람의 일 = 코드 작성이 아니라, AI가 따를 지시를 반복적으로 다듬는 것**
 </Callout>
 
-이 워크숍에서 만드는 **AGENTS.md**가 바로 그 자산입니다.
-한 번 만들어두면 매번 반복해서 말하지 않아도 AI가 일관되게 움직입니다.
-바이브 코딩의 경험에서 출발해, 에이전틱 코딩으로 가는 첫 걸음을 함께 걸어봅니다.
+이 워크숍에서는 같은 원리를 적용합니다.
+세 도구로 같은 앱을 반복해서 만들며 "AI에게 매번 하는 말"을 발견하고,
+그 반복을 **AGENTS.md**라는 재사용 가능한 지시 파일로 정리합니다.
+
+<Callout type="warning" emoji="📌">
+**AGENTS.md는 이 워크숍의 실습 산출물입니다.**
+카파시의 `program.md`, Anthropic의 `CLAUDE.md`, Cursor의 `.cursorrules` 등
+도구마다 이름은 다르지만, **"AI에게 나의 작업 방식을 알려주는 재사용 가능한 지시서"**라는 핵심은 같습니다.
+</Callout>
 
 ## 3세션 흐름
 
