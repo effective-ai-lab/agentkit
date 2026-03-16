@@ -17,7 +17,10 @@ esac
 
 # 한글 뒤에 **텍스트**가 오고 다시 한글이 오는 패턴 검출
 # perl regex로 한글(U+AC00-U+D7A3) 범위 체크
-MATCHES=$(perl -Mutf8 -CS -ne 'print "$.: $_" if /\p{Script=Hangul}\*\*[^*]+\*\*\p{Script=Hangul}/' "$FILE_PATH" 2>/dev/null || true)
+# 케이스 1: **볼드** 뒤에 한글이 바로 붙은 경우 (예: **카파시**는)
+# 케이스 2: 한글 뒤에 **볼드**가 바로 붙은 경우 (예: 창업자인**카파시**)
+# 공백이 양쪽 모두에 있으면 정상 동작하므로 제외
+MATCHES=$(perl -Mutf8 -CS -ne 'print "$.: $_" if /\p{Script=Hangul}\s*\*\*[^*]+\*\*\p{Script=Hangul}/ || /\p{Script=Hangul}\*\*[^*]+\*\*\s*\p{Script=Hangul}/' "$FILE_PATH" 2>/dev/null || true)
 
 if [ -n "$MATCHES" ]; then
   echo "⚠️ 한글 볼드 파싱 경고: 아래 줄에서 **볼드** 구문이 한글과 바로 붙어있어 렌더링이 깨질 수 있습니다."
