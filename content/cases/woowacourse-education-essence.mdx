@@ -7,7 +7,7 @@ import { Callout } from 'nextra/components'
 import dynamic from 'next/dynamic'
 import { layerChart, cycleChart } from './woowacourse-charts'
 
-const Mermaid = dynamic(() => import('../../app/components/Mermaid').then(m => m.Mermaid), { ssr: false })
+export const Mermaid = dynamic(() => import('../../app/components/Mermaid').then(m => m.Mermaid), { ssr: false })
 
 # 교육 에센스 추출 프로세스 — 우아한테크코스
 
