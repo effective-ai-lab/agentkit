@@ -3,5 +3,6 @@ export default {
     title: '소개',
     display: 'hidden'
   },
-  workshop: '워크숍'
+  workshop: '워크숍',
+  cases: '실무 사례'
 }

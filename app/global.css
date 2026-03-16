@@ -647,6 +647,11 @@ article pre code {
   background: transparent;
 }
 
+/* 코드블록 안 빈 줄이 보이도록 최소 높이 확보 */
+article pre code > span:has(> span:only-child:empty) {
+  min-height: 1lh;
+}
+
 /* ── Code block copy button ──────────────────── */
 
 .nextra-code button:has(.nextra-copy-icon) {
