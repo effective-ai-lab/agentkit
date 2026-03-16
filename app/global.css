@@ -752,7 +752,7 @@ article a:hover {
   background: var(--notion-gray-bg) !important;
   color: var(--agentkit-text-muted) !important;
   box-shadow: none !important;
-  padding: 0.85rem 1rem !important;
+  padding: 1.15rem 1.35rem !important;
 }
 
 /* Info callout — blue (type="info") */
