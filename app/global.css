@@ -1242,6 +1242,39 @@ article a.home-button.primary {
   letter-spacing: 0.02em;
 }
 
+/* Quote */
+.home-quote {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--agentkit-border-strong);
+  color: var(--agentkit-text-muted);
+  font-size: 0.91rem;
+  font-style: italic;
+  line-height: 1.72;
+}
+
+.home-quote-author {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.82rem;
+  color: var(--agentkit-text-subtle);
+}
+
+/* Beyond */
+.home-beyond {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.home-beyond .home-steps {
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-beyond .home-step-number {
+  font-size: 1.3rem;
+}
+
 /* CTA */
 .home-cta {
   display: grid;
