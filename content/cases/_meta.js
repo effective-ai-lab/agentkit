@@ -7,5 +7,6 @@ export default {
   'woowahan-ai-test': 'AI 테스트 자동화 — 우아한형제들',
   'woowahan-ai-asset': 'AI 자산화 — 우아한형제들',
   'woowacourse-education-essence': '교육 에센스 추출 — 우아한테크코스',
-  'karrot-ai-transformation': 'AI 트랜스포메이션 — 당근'
+  'karrot-ai-transformation': 'AI 트랜스포메이션 — 당근',
+  'toss-frontend-fundamentals': 'Frontend Fundamentals — 토스'
 }
