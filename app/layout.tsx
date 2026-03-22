@@ -4,6 +4,8 @@ import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import './global.css'
 import type { ReactNode } from 'react'
+import { TimerProvider } from './components/TimerContext'
+import { TimerToggle } from './components/TimerToggle'
 
 export const metadata = {
   title: 'agentkit',
@@ -26,6 +28,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       }
       projectLink="https://github.com/effective-ai-lab/agentkit"
     >
+      <TimerToggle />
       <ThemeSwitch lite className="navbar-theme-switch" />
     </Navbar>
   )
@@ -43,19 +46,21 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="ko" dir="ltr" suppressHydrationWarning>
       <Head />
       <body>
-        <Layout
-          navbar={navbar}
-          footer={footer}
-          pageMap={pageMap}
-          docsRepositoryBase="https://github.com/effective-ai-lab/agentkit/tree/main"
-          feedback={{ content: null }}
-          editLink=""
-          search={<Search placeholder="문서 검색" />}
-          toc={{ title: '목차', backToTop: null }}
-          sidebar={{ defaultMenuCollapseLevel: 1 }}
-        >
-          {children}
-        </Layout>
+        <TimerProvider>
+          <Layout
+            navbar={navbar}
+            footer={footer}
+            pageMap={pageMap}
+            docsRepositoryBase="https://github.com/effective-ai-lab/agentkit/tree/main"
+            feedback={{ content: null }}
+            editLink=""
+            search={<Search placeholder="문서 검색" />}
+            toc={{ title: '목차', backToTop: null }}
+            sidebar={{ defaultMenuCollapseLevel: 1 }}
+          >
+            {children}
+          </Layout>
+        </TimerProvider>
       </body>
     </html>
   )
