@@ -154,8 +154,12 @@ autoresearch에서도 같은 원리입니다. AI가 코드를 개선할 때 쓴 
 이 앱은 하나의 코드 리뷰 프롬프트가 여러 코드에서 얼마나 잘 작동하는지 검증하는 앱이야.
 내장된 Gemini 2.5 Flash 모델을 사용해줘.
 
-## 검증할 코드 파일
-저장소의 아래 5개 파일을 사용:
+## 저장소에서 가져올 파일
+
+평가 기준:
+- evaluation/code-review.md (10개 항목, 각 1~5점, 만점 50점 — 측정 가능한 채점 기준)
+
+검증할 코드 (5개):
 - samples/sample-code-1.md (출금 요청 처리)
 - samples/sample-code-2.md (자동 매수 예약)
 - samples/sample-code-3.md (주소 화이트리스트)
