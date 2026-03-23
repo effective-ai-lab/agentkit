@@ -19,5 +19,6 @@ tsconfig.tsbuildinfo
 .playwright-mcp/
 .temp/
 
-# screenshots (review artifacts)
-*.png
+# screenshots (review artifacts, root only)
+/*.png
+!public/**/*.png
