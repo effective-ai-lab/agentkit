@@ -181,6 +181,50 @@ autoresearch의 `program.md`도 같은 원리입니다.
 
 ---
 
+## autoresearch 메커니즘의 확산
+
+autoresearch의 "수정 → 실행 → 측정 → 유지/폐기 → 반복" 메커니즘은 LLM 학습을 넘어 다양한 분야로 확산되고 있습니다.
+
+### 실행 환경
+
+autoresearch는 특정 도구에 종속되지 않습니다. Karpathy는 README에서 이렇게 말합니다:
+
+> *"Simply spin up your Claude/Codex or whatever you want in this repo"*
+
+Claude Code, OpenAI Codex CLI, Cursor 등 어떤 코딩 에이전트든 `program.md`를 읽고 지시를 따를 수 있으면 됩니다. 핵심은 도구가 아니라 **구조(`program.md`)**입니다.
+
+### 커뮤니티 포크
+
+공개 3주 만에 다양한 환경으로 포크되었습니다:
+
+| 포크 | 환경 | GitHub Stars |
+|------|------|-------------|
+| [autoresearch-macos](https://github.com/miolini/autoresearch-macos) | macOS (Apple Silicon) | 1,500+ |
+| [autoresearch-at-home](https://github.com/brendanzhao/autoresearch-at-home) | 개인 사용자 가정용 | 400+ |
+| [autoresearch-win-rtx](https://github.com/jsegov/autoresearch-win-rtx) | Windows RTX | 300+ |
+| [autoresearch (AMD)](https://github.com/andyluo7/autoresearch) | AMD GPU | - |
+
+### 같은 메커니즘을 적용한 다른 분야
+
+autoresearch의 "자율적 반복 개선 루프"는 LLM 학습 외에도 적용되고 있습니다:
+
+| 분야 | 프로젝트 | 적용 방식 |
+|------|---------|----------|
+| GPU 커널 최적화 | [autokernel](https://github.com/cuda-mode/autokernel) | PyTorch 모델을 Triton 커널로 자동 변환 + 성능 측정 + 개선 반복 |
+| AI 과학자 | AI Scientist | 가설 수립 → 실험 → 논문 작성을 자율적으로 반복 |
+| 정량 분석 | Quant autoresearch | AI가 거래 전략을 자동으로 개발 + 백테스트 + 유지/폐기 |
+| 코드 최적화 | 다양한 포크 | 지표 정의 후 코드 성능을 자동으로 개선 |
+
+공통점: **측정 가능한 지표를 정의하고, AI가 자율적으로 수정→측정→판단을 반복**합니다.
+
+<Callout type="info">
+오늘 워크숍에서도 같은 구조를 적용합니다.
+대상이 LLM 학습이 아니라 <strong>여러분의 업무 결과물</strong>(코드, 기획서, TC 등)일 뿐,
+메커니즘은 동일합니다: 지시서를 다듬고 → AI가 결과물을 개선하고 → 평가 기준으로 측정하고 → 유지/폐기.
+</Callout>
+
+---
+
 ## program.md 전문
 
 autoresearch의 핵심인 `program.md` 전문입니다.
